@@ -9,7 +9,7 @@ namespace doga01
 {
     internal class Program
     {
-        
+
         static void Menukiir()
         {
             Console.WriteLine("===PETRIK KALANDPARK");
@@ -151,7 +151,7 @@ namespace doga01
                     return ujar;
             }
         }
-            static void Kuponcalc()
+        static void Kuponcalc()
         {
             Console.Write("Add meg az eredeti árat: ");
             int origin = Convert.ToInt32(Console.ReadLine());
@@ -181,9 +181,10 @@ namespace doga01
             int valasztas = 0;
             int bevetel = 0;
             bool fut = true;
-            try
+
+            do
             {
-                do
+                try
                 {
 
                     Console.Clear();
@@ -220,25 +221,29 @@ namespace doga01
                         default:
                             Console.WriteLine("Érvénytelen választás válassz újra.");
                             break;
-
                     }
+                }
+
+                catch (Exception)
+                {
+
+                    Console.WriteLine("Hibás értéket adtál meg!");
+                    Console.ReadLine();
+
+                }
 
 
 
 
                 } while (fut);
             }
-            catch (Exception)
-            {
 
-                Console.WriteLine("Hibás értéket adtál meg!");
-                Console.ReadLine();
             }
         }
 
-            }
             
-        }
+            
+        
         
     
 
